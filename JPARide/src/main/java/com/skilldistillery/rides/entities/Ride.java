@@ -13,6 +13,14 @@ public class Ride {
 	private int id;
 	@Column(name="trail_name")
 	private String trailName;
+	@Column(name="trail_length")
+	private String trailLength;
+	@Column(name="bike")
+	private String bike;
+	@Column(name="difficulty")
+	private String difficulty;
+	@Column(name="trail_type")
+	private String trailType;
 	
 	
 	
@@ -29,9 +37,29 @@ public class Ride {
 	public void setTrailName(String trailName) {
 		this.trailName = trailName;
 	}
-	@Override
-	public String toString() {
-		return "Ride [id=" + id + ", trailName=" + trailName + "]";
+	public String getTrailLength() {
+		return trailLength;
+	}
+	public void setTrailLength(String trailLength) {
+		this.trailLength = trailLength;
+	}
+	public String getBike() {
+		return bike;
+	}
+	public void setBike(String bike) {
+		this.bike = bike;
+	}
+	public String getDifficulty() {
+		return difficulty;
+	}
+	public void setDifficulty(String difficulty) {
+		this.difficulty = difficulty;
+	}
+	public String getType() {
+		return trailType;
+	}
+	public void setType(String type) {
+		this.trailType = type;
 	}
 	@Override
 	public int hashCode() {
@@ -53,5 +81,11 @@ public class Ride {
 			return false;
 		return true;
 	}
+	@Override
+	public String toString() {
+		return "Ride [id=" + id + ", trailName=" + trailName + ", trailLength=" + trailLength + ", bike=" + bike
+				+ ", difficulty=" + difficulty + ", type=" + trailType + "]";
+	}
+	
 
 }
