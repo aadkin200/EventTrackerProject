@@ -22,7 +22,11 @@ DROP TABLE IF EXISTS `ride` ;
 
 CREATE TABLE IF NOT EXISTS `ride` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `trail_name` VARCHAR(500) NULL,
+  `trail_name` VARCHAR(500) NOT NULL,
+  `trail_length` VARCHAR(45) NULL,
+  `bike` VARCHAR(200) NULL,
+  `difficulty` VARCHAR(45) NULL,
+  `trail_type` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -42,7 +46,8 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `ridedb`;
-INSERT INTO `ride` (`id`, `trail_name`) VALUES (1, 'Meadow Wood');
+INSERT INTO `ride` (`id`, `trail_name`, `trail_length`, `bike`, `difficulty`, `trail_type`) VALUES (1, 'Meadow Wood', '4 miles', 'YT Jeffsy', 'Black Diamond', 'Trail');
+INSERT INTO `ride` (`id`, `trail_name`, `trail_length`, `bike`, `difficulty`, `trail_type`) VALUES (2, 'Bryce', '1 mile', 'YT Cappra', 'Black Diamond', 'Park');
 
 COMMIT;
 
