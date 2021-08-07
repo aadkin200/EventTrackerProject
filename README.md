@@ -13,3 +13,6 @@ User can track rides they've done on a mountain bike. Ride data can include trai
 | `Ride` | `POST api/rides`      |    Creates a ride |
 | `Ride` | `PUT api/rides`      |    Updates a ride |
 | `void` | `DELETE api/rides/{rideId}`      |    Deletes a ride |
+
+## Database Schema
+![database schema](images/rideSchema.png)

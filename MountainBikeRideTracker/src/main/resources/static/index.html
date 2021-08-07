@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mountain Bike Ride Tracker</title>
+<script type="text/javascript" src="js/script.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1>Mountain Bike Ride Tracker</h1>
+	<form name="listAllForm">
+		<button name="listAllRides">List All</button>
+	</form>
+	<div id="tableFormDiv">
+		<table id="ridesTable"></table>
+	</div>
+	<hr>
+	<form name="createRide">
+		<label>Trail Name: </label><input type="text" name="trailName"><br>
+		<label>Bike Used: </label><input type="text" name="bike"><br>
+		<label>Trail Difficulty: </label>
+		<select name="difficulty">
+			<option value="Green">Green</option>
+			<option value="Blue">Blue</option>
+			<option value="Black">Black</option>
+			<option value="Double Black">Double Black</option>
+			<option value="Pro-Line">Pro-Line</option>
+		</select><br>
+		<label>Trail Length: </label><input type="number" name="trailLength"><br>
+		<label>Trail Type: </label>
+		<select name="trailType">
+			<option value="Trail">Trail</option>
+			<option value="Bike Park">Bike Park</option>
+		</select><br>
+		<button name="addRide">Add</button>
+	</form>
+</body>
+</html>

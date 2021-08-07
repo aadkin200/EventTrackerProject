@@ -55,11 +55,11 @@ public class Ride {
 	public void setDifficulty(String difficulty) {
 		this.difficulty = difficulty;
 	}
-	public String getType() {
+	public String getTrailType() {
 		return trailType;
 	}
-	public void setType(String type) {
-		this.trailType = type;
+	public void setTrailType(String trailType) {
+		this.trailType = trailType;
 	}
 	@Override
 	public int hashCode() {
