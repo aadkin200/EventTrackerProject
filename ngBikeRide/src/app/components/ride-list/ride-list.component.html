@@ -1,0 +1,52 @@
+<div *ngIf="ridesDiv">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Trail Name</th>
+        <th>Trail Length</th>
+        <th>Bike</th>
+        <th>Difficulty</th>
+        <th>Trail Type</th>
+        <th>Modify</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ride of rides">
+        <td>{{ride.id}}</td>
+        <td>{{ride.trailName}}</td>
+        <td>{{ride.trailLength}}</td>
+        <td>{{ride.bike}}</td>
+        <td>{{ride.difficulty}}</td>
+        <td>{{ride.trailType}}</td>
+        <td>
+          <button (click)="deleteRide(ride.id)">Delete</button>
+          <button (click)="setEditRide(ride)">Update</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="createRide()">Create</button>
+</div>
+
+<div *ngIf="createRideBool">
+  <form>
+    Trail Name: <input type="text" name="trailName" [(ngModel)]="newRide.trailName"><br>
+    Trail Length: <input name="trailLength" type="text" [(ngModel)]="newRide.trailLength"><br>
+    Bike: <input name="bike" type="text" [(ngModel)]="newRide.bike"><br>
+    Difficulty: <input name="difficulty" type="text" [(ngModel)]="newRide.difficulty"><br>
+    Trail Type: <input name="trailType" type="text" [(ngModel)]="newRide.trailType"><br>
+    <button (click)="addRide()">Create</button>
+  </form>
+</div>
+
+<div *ngIf="editRide">
+  <form>
+    Trail Name: <input type="text" name="trailName" value="{{editRide.trailName}}" [(ngModel)]="editRide.trailName"><br>
+    Trail Length: <input name="trailLength" type="text" value="{{editRide.trailLength}}" [(ngModel)]="editRide.trailLength"><br>
+    Bike: <input name="bike" type="text" value="{{editRide.bike}}" [(ngModel)]="editRide.bike"><br>
+    Difficulty: <input name="difficulty" type="text" value="{{editRide.difficulty}}" [(ngModel)]="editRide.difficulty"><br>
+    Trail Type: <input name="trailType" type="text" value="{{editRide.trailType}}" [(ngModel)]="editRide.trailType"><br>
+    <button (click)="updateRide(editRide)">Update</button>
+  </form>
+</div>
